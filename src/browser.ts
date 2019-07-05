@@ -148,37 +148,57 @@ const markdownOptions: DropdownOption[] = [
 
 const imageLightOptions: DropdownOption[] = [
   {
-    text: "LaunchDarkly",
-    value: "https://launchdarkly.com/img/launch-darkly-logo.png"
+    text: "LaunchDarkly Icon",
+    value: "https://images-mbc.catamorphic.now.sh/images/LD_Icon_Dark.svg"
   },
   {
-    text: "resiliency",
-    value: "https://launchdarkly.com/img/how-it-works/resiliency.svg"
+    text: "LD Logo Text",
+    value:
+      "https://images-mbc.catamorphic.now.sh/images/LD_Logo_Dark_vertical.png"
   },
   {
-    text: "Concept_Launch_Control",
-    value: "https://launchdarkly.com/img/product/Concept_Launch_Control.svg"
+    text: "LD Text",
+    value: "https://images-mbc.catamorphic.now.sh/images/LD_Logo_Dark.svg"
   },
-  { text: "API", value: "https://launchdarkly.com/img/product/API_v03.svg" }
+  {
+    text: "Integrations",
+    value: "https://images-mbc.catamorphic.now.sh/images/LD__Integrations.svg"
+  },
+  {
+    text: "LD API",
+    value: "https://images-mbc.catamorphic.now.sh/images/LD__API.svg"
+  },
+  {
+    text: "case studies",
+    value: "https://images-mbc.catamorphic.now.sh/images/LD__CaseStudies.png"
+  }
 ];
 
 const imageDarkOptions: DropdownOption[] = [
   {
-    text: "LaunchDarkly",
+    text: "LaunchDarkly Icon",
+    value: "https://images-mbc.catamorphic.now.sh/images/LD_Icon_Light.svg"
+  },
+  {
+    text: "LD Logo Text",
     value:
-      "https://blog.launchdarkly.com/wp-content/uploads/2018/04/LaunchDarklyBlog_v2.svg"
+      "https://images-mbc.catamorphic.now.sh/images/LD_Logo_Light_vertical.png"
+  },
+  {
+    text: "LD Text",
+    value: "https://images-mbc.catamorphic.now.sh/images/LD_Logo_Light.svg"
   },
   {
     text: "Integrations",
-    value: "https://launchdarkly.com/img/product/Integrations.svg"
+    value: "https://images-mbc.catamorphic.now.sh/images/LD__Integrations.svg"
   },
   {
-    text: "Logo",
-    value: "https://launchdarkly.com/img/launch-darkly-logo.png"
+    text: "LD API",
+    value: "https://images-mbc.catamorphic.now.sh/images/LD__API.svg"
   },
   {
-    text: "tiny",
-    value: "https://launchdarkly.com/img/footer/launchdarkly.png"
+    text: "case studies",
+    value: "https://images-mbc.catamorphic.now.sh/images/LD__CaseStudies.png"
   }
 ];
 
@@ -190,7 +210,8 @@ const widthOptions = [
   { text: "200", value: "200" },
   { text: "250", value: "250" },
   { text: "300", value: "300" },
-  { text: "350", value: "350" }
+  { text: "350", value: "350" },
+  { text: "400", value: "400" }
 ];
 
 const heightOptions = [
@@ -201,7 +222,8 @@ const heightOptions = [
   { text: "200", value: "200" },
   { text: "250", value: "250" },
   { text: "300", value: "300" },
-  { text: "350", value: "350" }
+  { text: "350", value: "350" },
+  { text: "400", value: "400" }
 ];
 
 interface AppState extends ParsedRequest {
@@ -406,7 +428,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
             onclick: () => {
               const nextImage =
                 images.length === 1
-                  ? "https://cdn.jsdelivr.net/gh/remojansen/logo.ts@master/ts.svg"
+                  ? "https://media.licdn.com/dms/image/C5603AQGuXPlQqhRqWg/profile-displayphoto-shrink_800_800/0?e=1567641600&v=beta&t=n1lCh2WwJeIusvqyLRFYyBOq7b68YPXrGZ_MRxTnu_k"
                   : "";
               setLoadingState({ images: [...images, nextImage] });
             }

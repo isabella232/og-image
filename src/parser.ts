@@ -50,11 +50,11 @@ function getDefaultImages(images: string[], theme: Theme): string[] {
   if (
     images.length > 0 &&
     images[0] &&
-    images[0].startsWith("https://launchdarkly.com/img/")
+    images[0].startsWith("https://images-mbc.catamorphic.now.sh/")
   ) {
     return images;
   }
   return theme === "light"
-    ? ["https://assets.zeit.co/image/upload/front/assets/design/now-black.svg"]
-    : ["https://assets.zeit.co/image/upload/front/assets/design/now-white.svg"];
+    ? ["https://images-mbc.catamorphic.now.sh/images/LD_Icon_Dark.svg"]
+    : ["https://images-mbc.catamorphic.now.sh/images/LD_Icon_Light.svg"];
 }
