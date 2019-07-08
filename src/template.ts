@@ -18,12 +18,10 @@ const mono = readFileSync(`${__dirname}/../.fonts/Vera-Mono.woff2`).toString(
 function getCss(theme: string, fontSize: string) {
   let background = "white";
   let foreground = "black";
-  let radial = "lightgray";
 
   if (theme === "dark") {
-    background = "black";
+    background = "#0e1932";
     foreground = "white";
-    radial = "dimgray";
   }
   return `
     @font-face {
@@ -49,7 +47,6 @@ function getCss(theme: string, fontSize: string) {
 
     body {
         background: ${background};
-        background-image: radial-gradient(${radial} 5%, transparent 0);
         background-size: 60px 60px;
         height: 100vh;
         display: flex;
@@ -59,7 +56,7 @@ function getCss(theme: string, fontSize: string) {
     }
 
     code {
-        color: #D400FF;
+        color: #0CA691;
         font-family: 'Vera';
         white-space: pre-wrap;
         letter-spacing: -5px;
